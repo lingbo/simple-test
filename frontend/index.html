@@ -49,7 +49,8 @@
     <script>
         async function fetchEmoji() {
             try {
-                const response = await fetch('http://' + window.location.hostname + ':5001/api/emoji');
+                // Use relative URL for production deployment
+                const response = await fetch('/api/emoji');
                 const data = await response.json();
                 document.getElementById('emoji').textContent = data.emoji;
             } catch (error) {

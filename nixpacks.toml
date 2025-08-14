@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ['python3', 'pip']
+
+[phases.install]
+cmd = 'pip install -r backend/requirements.txt'
+
+[phases.build]
+cmd = 'echo "Build complete"'
+
+[start]
+cmd = 'python backend/app.py'
